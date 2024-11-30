@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7eb9, #ffacb7, #ffb3ff, #ffccff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.key-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px;
+    color: #ffffff;
+    margin: 2rem;
+    min-width: 200px;
+    background: linear-gradient(145deg, #f0e8e8, #eef1ce); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.key-container:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(145deg, #a1c4fd, #fad0c4); 
+}
+
+.key-container h4 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #4b4b4b; 
+}
+
+.key-content {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4b4b4b; 
+}
+
+/* Ensure hover transforms feel dynamic */
+.key-container:hover h4 {
+    color: #2d2d2d; 
+}
+
+.key-container:hover .key-content {
+    color: #2d2d2d;
+}
